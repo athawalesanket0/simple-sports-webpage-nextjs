@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f7f7f8;
+  color: #000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.player-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 237px;
+  height: 511px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.img-container {
+  width: 217px;
+  height: 385.31px;
+  background-color: #000;
+}
+
+.team-name {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: left;
+  background-color: #fff;
+}
+
+.info-box {
+  width: 217px;
+  height: 54px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.info-column {
+  width: 50%;
+  padding: 5px;
+}
+
+.ad-img-container {
+  position: relative;
+  width: 217px;
+  height: 218px;
+}
+
+.ad-img-container img:first-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 47.78px;
+}
+
+.ad-img-container img:last-child {
+  width: 100%;
+  height: 100%;
+}
+
+.ad-team-name {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: left;
+  background-color: #fff;
+}
+
+.info {
+  background-color: #fff;
+}
+
+.btn {
+  background-color: #3c86f4;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  text-align: center;
+}
+
+.collection-spotlight {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  position: relative;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.collection-spotlight img:first-child {
+  left: 0;
+}
+
+.collection-spotlight img:last-child {
+  right: 0;
+}
+
+.collection {
+  width: 257px;
+  height: 624px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.collection .image-container {
+  width: 240px;
+  height: 425px;
+}
+
+.collection .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #fff;
+}
+
+.collection .button {
+  margin-top: 15px;
+}
+
+.dash-line {
+  width: 211px;
+  height: 0;
+  border-top: 1px dashed #000;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.team,
+.event-details {
+  background-color: #fff;
+}
+
+.team {
+  width: 213px;
+  height: 27px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.event-details {
+  width: 213px;
+  height: 61.66px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.button {
+  width: 213px;
+  height: 36px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .player-cards,
+  .collection-spotlight {
+    justify-content: center;
+  }
+
+  .container,
+  .collection {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .img-container,
+  .collection .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-container img,
+  .collection .image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+
+  .ad-img-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .ad-img-container img:last-child {
+    width: 100%;
+    height: auto;
+  }
+
+  .team,
+  .event-details,
+  .button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+}
